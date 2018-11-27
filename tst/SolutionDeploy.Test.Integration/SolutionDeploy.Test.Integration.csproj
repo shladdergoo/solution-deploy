@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.*" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NSubstitute" Version="3.1.0" />
+    <PackageReference Include="xunit" Version="2.3.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SolutionDeploy\SolutionDeploy.csproj" />
+    <ProjectReference Include="..\..\src\SolutionDeploy.Core\SolutionDeploy.Core.csproj" />
+    <ProjectReference Include="..\..\src\SolutionDeploy.Vsts\SolutionDeploy.Vsts.csproj" />
+  </ItemGroup>
+
+</Project>

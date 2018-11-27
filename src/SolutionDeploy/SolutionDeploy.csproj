@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <CodeAnalysisRuleSet>..\_analysis\analysis.ruleset</CodeAnalysisRuleSet>
+    <Product>SolutionDeploy</Product>
+    <Description>Deploy individual solution services at different versions in a single operation</Description>
+    <Company>Hitachi Consulting UK</Company>
+    <VersionPrefix>1.0.0</VersionPrefix>    <!-- Used to set both AssemblyVersion and AssemblyInformationalVersionAttribute
+                                          dotnet publish ~~version-suffix can supply a SemVer 
+                                          pre-release version value which is appended to 
+                                          AssemblyInformationalVersionAttribute
+                                          Can be overidden with -p:Version=x.y.z -->
+    <AssemblyVersion>1.0</AssemblyVersion>    <!--  Maps to AssemblyVersionAttribute
+                                                  Auto calculated from VersionPrefix if not specifed
+                                                  Does not override AssemblyInformationalVersionAttribute
+                                                  if it is specified -->
+    <FileVersion>1.0.0</FileVersion>    <!-- Maps to AssemblyFileVersionAttribute
+                                        Can be overidden with -p:FileVersion=x.y.z -->
+    <Copyright>Hitachi Consulting, 2018</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <DebugType>full</DebugType>    <!-- Required by OpenCover -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SolutionDeploy.Vsts\SolutionDeploy.Vsts.csproj" />
+    <ProjectReference Include="..\SolutionDeploy.Core\SolutionDeploy.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

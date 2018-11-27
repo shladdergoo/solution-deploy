@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/coverage": true,
+        "**/coverage.xml": true,
+        "**/TestResults": true
+    },
+    "omnisharp.disableMSBuildDiagnosticWarning": true
+}

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <CodeAnalysisRuleSet>..\_analysis\analysis.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <DebugType>full</DebugType>    <!-- Required by OpenCover -->
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssetTargetFallback>portable-net46+win8</AssetTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="3.19.4" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="15.134.0-preview" />
+    <PackageReference Include="Microsoft.VisualStudio.Services.Client" Version="15.134.0-preview" />
+    <PackageReference Include="Microsoft.VisualStudio.Services.Release.Client" Version="15.134.0-preview" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SolutionDeploy.Core\SolutionDeploy.Core.csproj" />
+  </ItemGroup>
+
+</Project>
