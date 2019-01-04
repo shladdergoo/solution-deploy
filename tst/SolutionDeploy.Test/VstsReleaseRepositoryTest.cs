@@ -67,7 +67,7 @@ namespace SolutionDeploy.Test
             IAuthenticator authenticator = Substitute.For<IAuthenticator>();
             VstsConfig vstsConfig = new VstsConfig
             {
-                BaseUrl = @"https://hcc-devops.visualstudio.com/"
+                BaseUrl = @""
             };
             authenticator.Authenticate().Returns(new AuthenticationResult
             {
@@ -300,7 +300,7 @@ namespace SolutionDeploy.Test
             IAuthenticator authenticator = Substitute.For<IAuthenticator>();
             VstsConfig vstsConfig = new VstsConfig
             {
-                BaseUrl = @"https://hcc-devops.visualstudio.com/"
+                BaseUrl = @""
             };
             authenticator.Authenticate().Returns(new AuthenticationResult
             {
