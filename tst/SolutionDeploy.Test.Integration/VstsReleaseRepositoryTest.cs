@@ -10,7 +10,7 @@ namespace SolutionDeploy.Test.Integration
 
     public class VstsReleaseRepositoryTest
     {
-        private const string TokenFilename = "solutiondeploy_tokens.json";
+        private const string TokenFilename = "solutiondeploy_solutiondeploy_tokens.json";
         string fullTokenFilename =
             Path.Combine(Environment.ExpandEnvironmentVariables("%HOMEDRIVE%%HOMEPATH%"), TokenFilename);
         IReleaseRepository sut;

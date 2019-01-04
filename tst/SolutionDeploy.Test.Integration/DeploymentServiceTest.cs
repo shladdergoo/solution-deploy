@@ -15,14 +15,14 @@ namespace SolutionDeploy.Test.Integration
         [Fact]
         public void Deploy_Latest_Succeeds()
         {
-            File.Copy(@"../../../testdata/tokens.json", "tokens.json", true);
+            File.Copy(@"../../../testdata/solutiondeploy_tokens.json", "solutiondeploy_tokens.json", true);
             File.Copy(@"../../../testdata/manifest.json", "manifest.json", true);
 
             sut = BuildService();
 
             sut.Deploy("authorizationservice", "Azure Prod");
 
-            File.Copy("tokens.json", @"../../../testdata/tokens.json", true);
+            File.Copy("solutiondeploy_tokens.json", @"../../../testdata/solutiondeploy_tokens.json", true);
         }
 
         private static IDeploymentService BuildService()

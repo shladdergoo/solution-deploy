@@ -10,7 +10,7 @@ namespace SolutionDeploy.Test.Integration
     {
         ITokenRepository sut;
 
-        const string TokenFilename = "solutiondeploy_tokens.json";
+        const string TokenFilename = "solutiondeploy_solutiondeploy_tokens.json";
 
         [Fact]
         public void GetTokens_Succeeds()

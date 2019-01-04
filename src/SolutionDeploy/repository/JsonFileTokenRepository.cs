@@ -9,7 +9,7 @@
 
     internal class JsonFileTokenRepository : ITokenRepository
     {
-        private const string TokenFilename = @"solutiondeploy_tokens.json";
+        private const string TokenFilename = @"solutiondeploy_solutiondeploy_tokens.json";
 
         private readonly IFileSystem fileSystem;
 
