@@ -37,3 +37,5 @@ The name of the code branch to be used for deployment
 Consider partially succeeded releases to pre-req environment  
 -w | --what-if  
 Run in 'what-if' mode. No releases will be deployed
+
+Uses OAuth in place of PAT authorisation - see https://github.com/shladdergoo/authorization-service for details of the web service that carries out the OAuth handshake and generates the tokens.
